@@ -3,4 +3,7 @@ ktor:
     modules:
       - org.delcom.ApplicationKt.module
   deployment:
-    port: 8080
+    # Mengambil nilai dari System.setProperty("APP_PORT") yang ada di main()
+    port: ${APP_PORT}
+    # Mengambil nilai dari System.setProperty("APP_HOST") yang ada di main()
+    host: ${APP_HOST}
